@@ -1,0 +1,654 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accueil</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Ag7Art</h1>
+        </header>
+        <main>
+            <div class="gallery">
+                <img src="img/AG7.png" alt="Œuvre 1" onclick="openModal(this)">
+                <img src="img/PS.jpg" alt="Œuvre 2" onclick="openModal(this)">
+                <img src="img/Visage_Crack.jpg" alt="Œuvre 3" onclick="openModal(this)">
+            </div>
+        </main>
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg">
+        </div>
+        <script src="js/scripts.js"></script>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ag7Art</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="container">
+                    <h2 class="img">
+                        Ag7Art
+                    </h2>
+                    <div class="search-bar">
+                        <img class="all all-search" src="img/icon_recherche.png">
+                        <input type="search" placeholder="Recherche pour createurs: inspirations, projets">
+                    </div>
+                    <div class="create">
+                        <label class="btn btn-primary" for="create-post">Créer</label>
+                        <div class="profile-photo">
+                            <img src="img/AG7.png">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- -------- GAUCHE -------- -->
+                <div class="left">
+                    <a class="profile">
+                        <div class="profile-photo">
+                            <img src="img/Visage_Crack.jpg">
+                        </div>
+                        <div class="handle">
+                            <h4>Agape Mh</h4>
+                            <p class="text-muted">
+                                @Jour1
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- --------- SIDEBAR ----------- -->
+                    <div class="sidebar">
+                        <a class="menu-item active">
+                            <span><img class="uil uil-home" src="img/icon_home.png"></span><h3>Accueil</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><img class="uil uil-home" src="img/icon_analyse.png"></span><h3>Explorer</h3>
+                        </a>
+                        <a class="menu-item" id="notifications">
+                            <span><img class="uil uil-bell" src="img/icon_notifications.png"></span><small class="notification-count">9+</small> <h3>Notifications</h3>
+                            <!-- ----------- POPUP DES NOTIFICATIONS ------------ -->
+                            <div class="notifications-popup">
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="images/Profile-2.JPG">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Nath Alie</b> a accepté ta demande d'amis
+                                        <small class="text-muted">IL Y'A 2 JOURS</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="images/Profile-3.JPG">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Safi Saphirine</b> a commenter ta publication
+                                        <small class="text-muted">IL Y'A 1 HEURE</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="images/Profile-4.JPG">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Nicholas Ngeleza</b> a commenter une publication dans laquelle vous figurer
+                                        <small class="text-muted">IL Y'A 2 HEURE</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="images/Profile-5.JPG">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Jospin Kahereni</b> a accepté ta demande d'amis
+                                        <small class="text-muted">IL Y'A 2 MIN</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ---------- FIN DU POPUP DES NOTIFICATIONS -->
+                        </a>
+                        <a class="menu-item" id="messages-notification">
+                            <span><img class="uil uil-envelope-alt" src="img/icon_message.png"><small class="notification-count">6</small></span><h3>Messages</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><img class="uil uil-bookmark" src="img/icon_stat.png"></span><h3>Statistiques</h3>
+                        </a>
+                        <a class="menu-item" id="theme">
+                            <span><img class="uil uil-palette" src="img/icon_theme.png"></span><h3>Theme</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><img class="uil uil-setting" src="img/icon_settings.png"></span><h3>Paramètres</h3>
+                        </a>                 
+                    </div>
+                    <!-- ------------ FIN DU SIDEBAR ----------- -->
+                    <label for="create-post" class="btn btn-primary">Voir plus</label>
+                </div>
+                <!-- --------------- FIN DE GAUCHE ----------  -->
+
+                <!-- MILIEU -->
+                <div class="middle">
+                    <form class="create-post">
+                        <div class="profile-photo">
+                            <img src="img/Profile-1.JPG">
+                        </div>
+                        <input type="text" placeholder="A quoi pensez-vous, Ag7 ?" id="create-post">
+                        <input type="submit" value="Envoyer" class="btn btn-primary">
+                    </form>
+                    <!-- -------------------- FILS ------------ -->
+                    <div class="feeds">
+                        <!-- --------- PUBLICATION 1 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-12.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 35 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Visage_Crack.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_like.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-10.JPG"></span>
+                                <span><img src="img/Profile-4.JPG"></span>
+                                <span><img src="img/Profile-2.JPG"></span>
+                                <p>Aimé par <b>Miss Diamant</b> et <b>2,323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Eugenie Vgh</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Communauté</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 277 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 1 -->
+
+                        <!-- --------- PUBLICATION 2 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-1.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 2 -->
+
+                        <!-- --------- PUBLICATION 3 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-2.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 3 -->
+
+                        <!-- --------- PUBLICATION 4 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-3.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 4 -->
+
+                        <!-- --------- PUBLICATION 5 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-4.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 5 -->
+
+                        <!-- --------- PUBLICATION 6 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-9.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 6 -->
+
+                        <!-- --------- PUBLICATION 7 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-7.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 7 -->
+
+                        <!-- --------- PUBLICATION 8 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-8.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 8 -->
+
+                        <!-- --------- PUBLICATION 9 ------------- -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="img/Profile-3.JPG">
+                                    </div>
+                                    <div class="ingo">
+                                        <h3>Agape Ag7</h3>
+                                        <small>Butembo, IL Y'A 45 MINUTES</small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <img src="img/icon_points.png">
+                                </span>
+                            </div>
+
+                            <div class="photo" id="modalImg">
+                                <img src="img/Pub/Publication-5.jpg">
+                            </div>
+
+                            <div class="action-button">
+                                <div class="interaction-buttons">
+                                    <span><img src="img/icon_nolike.png"></span>
+                                    <span><img src="img/icon_comment.png"></span>
+                                    <span><img src="img/icon_partage.png"></span>
+                                    <div class="bookmark">
+                                        <span><img src="img/icon_enregistrer.png"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="liked-by">
+                                <span><img src="img/Profile-9.JPG"></span>
+                                <span><img src="img/Profile-11.JPG"></span>
+                                <span><img src="img/Profile-12.JPG"></span>
+                                <p>Aimé par <b>Kivu Kwetu</b> et <b>323 autres</b></p>
+                            </div>
+
+                            <div class="caption">
+                                <p><b>Safi Saphirine</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="harsh-tag">#Lifestyle</span> </p>
+                            </div>
+                            <div class="comments text-muted">
+                                Voir tous les 77 commentaires
+                            </div>
+                        </div>
+                        <!-- ---------FIN PUBLICATION 9 -->
+                    </div>
+
+                    <!-- --------- FIN FILS --------------- -->
+                </div>
+                <!-- --------- FIN DU MILIEU ------------- -->
+
+                 <!-- ---------- PERSONNALISATION DU THEME ---------- -->
+        <div class="customize-theme">
+            <div class="card">
+                <h2>Personnalisez votre vue</h2>
+                <p class="text-muted">Gérer la taille, la couleur de police et l'arrière-plan</p>
+
+                <div class="font-size">
+                    <h4>Taille de police</h4>
+                    <div>
+                        <h6>Aa</h6>
+                        <div class="choose-size">
+                            <span class="font-size-1"></span>
+                            <span class="font-size-2 active"></span>
+                            <span class="font-size-3"></span>
+                            <span class="font-size-4"></span>
+                            <span class="font-size-5"></span>
+                        </div>
+                        <h3>Aa</h3>
+                    </div>
+                </div>
+
+                <!-- ----------- COULEUR DE BASE --------- -->
+                <div class="color">
+                    <h4>Couleur</h4>
+                    <div class="choose-color">
+                        <span class="color-1 active"></span>
+                        <span class="color-2"></span>
+                        <span class="color-3"></span>
+                        <span class="color-4"></span>
+                        <span class="color-5"></span>
+                    </div>
+                </div>
+
+                <!-- ---------- COULEURS BACKGROUND ----- -->
+                <div class="background">
+                    <h4>Arrière plan</h4>
+                    <div class="choose-bg">
+                        <div class="bg-1 active">
+                            <span></span>
+                            <h5 for="bg-1">Lumineux</h5>
+                        </div>
+                        <div class="bg-2">
+                            <span></span>
+                            <h5>Dim</h5>
+                        </div>
+                        <div class="bg-3">
+                            <span></span>
+                            <h5 for="bg-3">Sombre</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
